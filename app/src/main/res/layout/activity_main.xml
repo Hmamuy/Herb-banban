@@ -59,20 +59,23 @@
             android:layout_height="wrap_content"
             android:text="@string/signin"
             android:id="@+id/button"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="clickSignInMain" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/signip"
+            android:text="@string/signup"
             android:id="@+id/button2"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="clickSignUpMain" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/guest"
             android:id="@+id/button3"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="clickGuest" />
     </LinearLayout>
 </RelativeLayout>

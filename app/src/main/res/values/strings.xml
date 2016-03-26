@@ -5,7 +5,9 @@
     <string name="user">User</string>
     <string name="pass">Password</string>
     <string name="signin">Login</string>
-    <string name="signip">สมัครสมาชิก</string>
+    <string name="signup">สมัครสมาชิก</string>
     <string name="guest">Guest</string>
+    
+
 
 </resources>
