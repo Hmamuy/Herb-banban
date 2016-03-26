@@ -8,6 +8,9 @@
     <string name="signup">สมัครสมาชิก</string>
     <string name="guest">Guest</string>
     
-
+    <string name="name">ชื่อ</string>
+    <string name="currency">สกุล</string>
+    <string name="phone">เบอร์โทรศัพท์</string>
+    <string name="address">ที่อยู่</string>
 
 </resources>
