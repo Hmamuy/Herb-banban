@@ -11,7 +11,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Bind Widget
+        binWidget();
     }  //Main Method
+
+    private void binWidget() {
+
+    } //binWidget
 
     public void clickSignInMain(View view) {
 
