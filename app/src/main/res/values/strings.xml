@@ -12,5 +12,6 @@
     <string name="currency">สกุล</string>
     <string name="phone">เบอร์โทรศัพท์</string>
     <string name="address">ที่อยู่</string>
+    <string name="title_activity_detail">Map</string>
 
 </resources>
