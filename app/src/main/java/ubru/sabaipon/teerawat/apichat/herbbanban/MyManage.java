@@ -8,9 +8,10 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by หมามุ้ย on 27/3/2559.
  */
 public class MyManage {
+
     //Explicit
     private MyOpenHelper myOpenHelper;
-    private SQLiteDatabase sqLiteDatabase;
+    private SQLiteDatabase sqLiteDatabase,deleSqLiteDatabase;
 
     public static final String user_table = "userTABLE";
     public static final String column_id = "id";
@@ -38,6 +39,8 @@ public class MyManage {
         sqLiteDatabase = myOpenHelper.getWritableDatabase();
 
     }   //Constructor
+
+
 
     public long addValueToSQLite(int intTABLE,
                                  String strColumn1,

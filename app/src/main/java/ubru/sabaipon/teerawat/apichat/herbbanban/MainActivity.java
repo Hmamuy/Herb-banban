@@ -1,6 +1,7 @@
 package ubru.sabaipon.teerawat.apichat.herbbanban;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,15 +17,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // R
+
         myManage = new MyManage(MainActivity.this);
 
         //Test Add Value
-        testAddValue();
+        //testAddValue
+
+        //Delete SQLite
+        deleteSQLite();
+
 
         //Bind Widget
         binWidget();
     }  //Main Method
+
+    private void deleteSQLite() {
+
+        SQLiteDatabase sqLiteDatabas = openOrCreateDatabase(MyOpenHelper.database_name,
+                MODE_PRIVATE,null);
+        sqLiteDatabas.delete(MyManage.user_table, null, null);
+        sqLiteDatabas.delete(MyManage.herb_table, null, null);
+    }   //delete
 
     private void testAddValue() {
         int intTime = 0;
