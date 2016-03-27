@@ -33,16 +33,24 @@ public class HerbListView extends AppCompatActivity {
         cursor.moveToFirst();
         int intCount = cursor.getCount();
 
-        String[] nameStrings = new String[intCount];
-        String[] imageStrings = new String[intCount];
+        final String[] nameStrings = new String[intCount];
+        final String[] imageStrings = new String[intCount];
+        final String[] descripStrings = new String[intCount];
+        final String[] howtoStrings = new String[intCount];
+        final String[] latStrings = new String[intCount];
+        final String[] lngStrings = new String[intCount];
 
         for (int i = 0; i < intCount; i++) {
 
             nameStrings[i] = cursor.getString(1);
             imageStrings[i] = cursor.getString(2);
+            descripStrings[i] = cursor.getString(3);
+            howtoStrings[i] = cursor.getString(4);
+            latStrings[i] = cursor.getString(5);
+            lngStrings[i] = cursor.getString(6);
 
             cursor.moveToNext();
-       }   //for
+        }   //for
         cursor.close();
 
         HerbAdapter herbAdapter = new HerbAdapter(this, imageStrings, nameStrings);
@@ -54,6 +62,14 @@ public class HerbListView extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Intent intent = new Intent(HerbListView.this, DetailActivity.class);
+
+                intent.putExtra("Name", nameStrings[i]);
+                intent.putExtra("Image", imageStrings[i]);
+                intent.putExtra("Description", descripStrings[i]);
+                intent.putExtra("HowTo", howtoStrings[i]);
+                intent.putExtra("Lat", latStrings[i]);
+                intent.putExtra("Lng", lngStrings[i]);
+
                 startActivity(intent);
 
             }   //onItem
