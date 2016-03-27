@@ -1,6 +1,7 @@
 package ubru.sabaipon.teerawat.apichat.herbbanban;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.StrictMode;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -210,17 +212,62 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
 
+            checkUser();
+
         }
 
 
     }   //signIn
+
+    private void checkUser() {
+
+        try {
+
+            SQLiteDatabase sqLiteDatabase=openOrCreateDatabase(MyOpenHelper.database_name,
+                    MODE_PRIVATE,null);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " +"'" +userString+"'" , null);
+            cursor.moveToFirst();
+            String[] resultStrings = new String[cursor.getColumnCount()];
+            for (int i = 0; i < cursor.getColumnCount(); i++) {
+
+                resultStrings[i] = cursor.getString(i);
+
+            }   // for
+            cursor.close();
+            //check password
+
+            if (passwordString.equals(resultStrings[2])) {
+                Toast.makeText(this,"ยินดีต้อนรับ ค่ะ"+resultStrings[4],Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(this, ReadAllHerbActivity.class);
+                intent.putExtra("Data", resultStrings);
+                startActivity(intent);
+                finish();
+
+            } else {
+                MyAlertDialog myAlertDialog = new MyAlertDialog();
+                myAlertDialog.myDialog(this, "Password False" , "กรุณากรอกใหม่ Password ผิด");
+
+            }
+
+
+
+        } catch (Exception e) {
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.myDialog(this, "ไม่พบข้อมูลค่ะ" , "ไม่มี" +userString+ "ในฐานข้อมูลของเรา");
+        }
+
+    }   //checkUser
 
     public void clickSignUpMain(View view) {
         startActivity(new Intent(MainActivity.this, SignUpActivity.class));
     }
 
     public void clickGuest(View view) {
-        startActivity(new Intent(MainActivity.this, ReadAllHerbActivity.class));
+        Intent intent = new Intent(this, HerbListView.class);
+        intent.putExtra("Status", "1");
+        startActivity(intent);
+
     }
 
     @Override
