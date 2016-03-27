@@ -7,10 +7,17 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    // ต้องการสร้างฐานข้อมูล
+    private MyManage myManage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // R
+        myManage = new MyManage(MainActivity.this);
 
         //Bind Widget
         binWidget();
