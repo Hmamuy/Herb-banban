@@ -19,11 +19,27 @@ public class MainActivity extends AppCompatActivity {
         // R
         myManage = new MyManage(MainActivity.this);
 
+        //Test Add Value
+        testAddValue();
+
         //Bind Widget
         binWidget();
     }  //Main Method
 
+    private void testAddValue() {
+        int intTime = 0;
+        while (intTime <= 1) {
+
+            myManage.addValueToSQLite(intTime, "test1", "test2", "test3",
+                    "test4", "test5", "test6", "test7");
+
+            intTime += 1;
+
+        }
+    }
+
     private void binWidget() {
+
 
     } //binWidget
 
@@ -32,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickSignUpMain(View view) {
-        startActivity(new Intent(MainActivity.this,SignUpActivity.class));
+        startActivity(new Intent(MainActivity.this, SignUpActivity.class));
     }
 
     public void clickGuest(View view) {
-        startActivity(new Intent(MainActivity.this,ReadAllHerbActivity.class));
+        startActivity(new Intent(MainActivity.this, ReadAllHerbActivity.class));
     }
 
 }  // Main Class
