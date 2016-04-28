@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Herb banban</string>
+    <string name="app_name">สมุนไพรไทย</string>
 
-    <string name="title_main">สมุนไพร บ้านๆ</string>
+    <string name="title_main">เข้าสู่ระบบ</string>
     <string name="user">User</string>
     <string name="pass">Password</string>
     <string name="signin">Login</string>
@@ -13,5 +13,11 @@
     <string name="phone">เบอร์โทรศัพท์</string>
     <string name="address">ที่อยู่</string>
     <string name="title_activity_detail">Map</string>
+
+    <string name="up_main">เพิ่มข้อมูลสมุนไพร</string>
+    <string name="up_hub">ชื่อสมุนไพร</string>
+    <string name="up_hub1">สรรพคุณ</string>
+    <string name="up_hub2">วิธีใช้</string>
+    <string name="up_hub3">พิกัด</string>
 
 </resources>

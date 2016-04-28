@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/wall7">
+    android:background="@drawable/bbb2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Descrip"
+                android:text="@string/up_hub1"
                 android:id="@+id/textView16"
                 android:textSize="@dimen/h1"
                 android:layout_marginTop="15dp" />
@@ -48,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How To"
+                android:text="@string/up_hub2"
                 android:id="@+id/textView18"
                 android:textSize="@dimen/h1"
                 android:layout_marginTop="15dp" />
