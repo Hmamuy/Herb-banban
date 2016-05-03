@@ -99,7 +99,7 @@
                 android:src="@drawable/icon3"
                 android:nestedScrollingEnabled="true"
                 android:padding="10dp"
-                android:onClick="ClickAmin" />
+                android:onClick="ClickAdmin" />
         </LinearLayout>
 
         <LinearLayout

@@ -53,7 +53,7 @@
             android:label="@string/title_activity_detail" />
         <activity android:name=".UpdateHerb" />
         <activity android:name=".ApproveHerb" />
-        <activity android:name=".AminHerb"></activity>
+        <activity android:name=".AdminHerb"></activity>
     </application>
 
 </manifest>

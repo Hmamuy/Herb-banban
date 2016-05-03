@@ -44,5 +44,15 @@ public class ReadAllHerbActivity extends AppCompatActivity {
 
 
     }
+    public void ClickAdmin (View view) {
 
+        if (myResultStrings[2].equals("admin")) {
+            startActivity(new Intent(this, AdminHerb .class));
+
+        } else {
+            Toast.makeText(this, "คุณไม่มีสิทธิเข้าถึงข้อมูล ค่ะ", Toast.LENGTH_SHORT).show();
+
+        }
+
+    }
 }   //Main Class
