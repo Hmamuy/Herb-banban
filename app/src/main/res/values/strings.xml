@@ -4,9 +4,9 @@
     <string name="title_main">เข้าสู่ระบบ</string>
     <string name="user">User</string>
     <string name="pass">Password</string>
-    <string name="signin">Login</string>
+    <string name="signin">เข้าสู่ระบบ</string>
     <string name="signup">สมัครสมาชิก</string>
-    <string name="guest">Guest</string>
+    <string name="guest">ข้อมูลสมุนไพร</string>
 
     <string name="name">ชื่อ</string>
     <string name="currency">สกุล</string>
