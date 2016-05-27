@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">สมุนไพรไทย</string>
+    <string name="show_name">Name:</string>
+    <string name="show_surname">Surname:</string>
 
     <string name="title_main">เข้าสู่ระบบ</string>
     <string name="user">User</string>
