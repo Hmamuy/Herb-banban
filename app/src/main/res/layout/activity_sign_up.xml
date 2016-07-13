@@ -97,7 +97,7 @@
                     android:text="@string/phone"
                     android:id="@+id/textView5"
                     android:layout_weight="1"
-                    android:textSize="@dimen/h2"
+                    android:textSize="18dp"
                     android:textColor="#060006" />
 
                 <EditText
@@ -163,7 +163,7 @@
                     android:text="@string/pass1"
                     android:id="@+id/textView8"
                     android:layout_weight="1"
-                    android:textSize="@dimen/h2"
+                    android:textSize="18dp"
                     android:textColor="#060006" />
 
                 <EditText

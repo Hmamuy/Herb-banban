@@ -79,7 +79,7 @@ public class SignUpActivity extends AppCompatActivity {
             nameValuePairs.add(new BasicNameValuePair("Address", addressString));
 
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/herb/php_add_user_master.php");
+            HttpPost httpPost = new HttpPost("http://project-com-tech.ubru.ac.th/~cpt2ys5702/php_add_user_master.php");
             httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
             httpClient.execute(httpPost);
 

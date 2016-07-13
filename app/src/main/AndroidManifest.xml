@@ -33,7 +33,7 @@
         -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+           android:value="@integer/google_play_services_version" />
 
         <activity android:name=".HerbListView" />
         <!--
@@ -53,7 +53,8 @@
             android:label="@string/title_activity_detail" />
         <activity android:name=".UpdateHerb" />
         <activity android:name=".ApproveHerb" />
-        <activity android:name=".AdminHerb"></activity>
+        <activity android:name=".AdminHerb" />
+        <activity android:name=".UpdateMapsActivity"></activity>
     </application>
 
 </manifest>

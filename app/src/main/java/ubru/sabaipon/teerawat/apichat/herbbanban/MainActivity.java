@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
             //1 create inputStream
             InputStream inputStream = null;
-            String[] urlStrings = {"http://swiftcodingthai.com/herb/php_get_user.php",
-                    "http://swiftcodingthai.com/herb/php_get_herb.php"};
+            String[] urlStrings = {"http://project-com-tech.ubru.ac.th/~cpt2ys5702/php_get_user.php",
+                    "http://project-com-tech.ubru.ac.th/~cpt2ys5702/php_get_herb.php"};
 
             try {
 
